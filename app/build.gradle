@@ -10,7 +10,6 @@ android {
         }
     }
     compileSdkVersion 29
-    buildToolsVersion '29.0.3'
     defaultConfig {
         applicationId "com.gautam.medicinetime"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -46,6 +45,7 @@ android {
             signingConfig signingConfigs.config
         }
     }
+    namespace 'com.gautam.medicinetime'
     // Remove mockRelease as it's not needed.
     android.variantFilter { variant ->
         if (variant.buildType.name == 'release'
